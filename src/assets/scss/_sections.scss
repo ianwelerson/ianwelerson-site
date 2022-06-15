@@ -1,0 +1,26 @@
+.entry-section {
+  text-align: center;
+
+  &__hello {
+    margin: 0;
+    color: $gray-500;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+
+  &__content {
+    margin: 0.25rem 0 0 0;
+    font-size: 4.375rem;
+    font-weight: 400;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__cta {
+    margin-top: 4rem;
+  }
+}
