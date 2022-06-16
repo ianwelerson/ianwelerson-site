@@ -86,3 +86,53 @@
     }
   }
 }
+
+.contact-section {
+  &__email {
+    text-align: center;
+
+    .email-link {
+      font-size: 3.125rem;
+      text-decoration: none;
+      color: $white;
+      font-weight: 700;
+      letter-spacing: .1rem;
+      transition: all .4s ease-in;
+
+      &:hover {
+        transition: all .4s ease-out;
+        text-decoration: underline;
+        color: $gray-400;
+      }
+    }
+  }
+
+  &__social-networks {
+    margin: 6rem -2rem -0.75rem -2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .social-network {
+      display: block;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-bottom: 0.75rem;
+      width: 5rem;
+      height: 5rem;
+
+      &__link {
+        color: $white;
+
+        &:hover {
+          color: $gray-400;
+        }
+      }
+
+      &__icon {
+        fill: currentColor;
+      }
+    }
+  }
+}
