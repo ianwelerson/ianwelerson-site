@@ -4,7 +4,7 @@
   &__hello {
     margin: 0;
     color: $gray-500;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -12,7 +12,7 @@
 
   &__content {
     margin: 0.25rem 0 0 0;
-    font-size: 4.375rem;
+    font-size: 3.125rem;
     font-weight: 400;
 
     strong {
@@ -21,6 +21,68 @@
   }
 
   &__cta {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__picture {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &__description {
+    margin-top: 2rem;
+    max-width: 70vw;
+
+    .description-text {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: .1rem;
+      line-height: 1.5;
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  &__skills {
+    margin: 3rem -0.5rem -1.25rem -0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .skill {
+      margin-bottom: 1.25rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      background-color: $blue-400;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 12%), 0 2px 4px 0 rgb(0 0 0 / 8%);
+      border-radius: 9999px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      transition: all .4s ease-in;
+
+      &__text {
+        margin: 0;
+        padding: 0.75rem 1.25rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        cursor: default;
+      }
+
+      &:hover {
+        transition: all .4s ease-out;
+        background-color: transparent;
+        border-color: $gray-400;
+        box-shadow: none;
+      }
+    }
   }
 }

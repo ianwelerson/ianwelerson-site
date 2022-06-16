@@ -4,17 +4,17 @@
   display: flex;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: rotate(0, 50%);
+  color: $blue-400;
 
   &__icon {
     height: 100%;
+    fill: currentColor;
   }
 }
 
 .cta {
   padding: 0.75rem 2.5rem;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: $white;
   text-decoration: none;
