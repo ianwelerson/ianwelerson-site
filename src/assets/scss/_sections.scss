@@ -8,12 +8,14 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
+    opacity: 0;
   }
 
   &__content {
     margin: 0.25rem 0 0 0;
     font-size: 3.125rem;
     font-weight: 400;
+    opacity: 0;
 
     strong {
       font-weight: 700;
@@ -22,6 +24,7 @@
 
   &__cta {
     margin-top: 2.5rem;
+    opacity: 0;
   }
 }
 
@@ -34,11 +37,13 @@
   &__picture {
     width: 12rem;
     height: 12rem;
+    opacity: 0;
   }
 
   &__description {
     margin-top: 2rem;
     max-width: 70vw;
+    opacity: 0;
 
     .description-text {
       margin: 0;
@@ -68,6 +73,7 @@
       border-style: solid;
       border-color: transparent;
       transition: all .4s ease-in;
+      opacity: 0;
 
       &__text {
         margin: 0;
@@ -90,6 +96,7 @@
 .contact-section {
   &__email {
     text-align: center;
+    opacity: 0;
 
     .email-link {
       font-size: 3.125rem;
@@ -121,6 +128,7 @@
       margin-bottom: 0.75rem;
       width: 5rem;
       height: 5rem;
+      opacity: 0;
 
       &__link {
         color: $white;
@@ -132,6 +140,51 @@
 
       &__icon {
         fill: currentColor;
+      }
+    }
+  }
+}
+
+// Animations when section is viewed
+.viewed {
+  .entry-section {
+    &__hello {
+      @include animate(tracking-in-expand, 0.5s, 0s, both);
+    }
+  
+    &__content {
+      @include animate(fade-in-fwd, 1.2s, 0.5s, both);
+    }
+  
+    &__cta {
+      @include animate(scale-in-ver-center, 0.5s, 1s, both);
+    }
+  }
+
+  .about-section {
+    &__picture {
+      @include animate(fade-in-fwd, 1s, 0.5s, both);
+    }
+
+    &__description {
+      @include animate(fade-in-fwd, 1.2s, 1s, both);
+    }
+
+    &__skills {
+      .skill {
+        @include animate(flip-in-hor-top, 0.6s, 1.5s, both);
+      }
+    }
+  }
+
+  .contact-section {
+    &__email {
+      @include animate(tracking-in-expand, 0.5s, 0s, both);
+    }
+
+    &__social-networks {
+      .social-network {
+        @include animate(rotate-in-ver, 0.5s, 0.5s, both);
       }
     }
   }

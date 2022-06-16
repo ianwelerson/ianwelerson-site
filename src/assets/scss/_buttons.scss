@@ -3,12 +3,24 @@
   width: 3rem;
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   color: $blue-400;
+  opacity: 0;
+  transition: all .4s ease-in;
+  @include animate(arrow-bottom-infinite, 1.5s, 0, both, infinite, alternate-reverse);
 
   &__icon {
     height: 100%;
     fill: currentColor;
+  }
+
+  &--reverse {
+    transition: all .4s ease-out;
+    bottom: -1rem;
+    
+    .go-down__icon {
+      transform: rotate(180deg);
+    }
   }
 }
 
