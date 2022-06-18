@@ -1,0 +1,247 @@
+.entry-section {
+  text-align: center;
+
+  &__hello {
+    margin: 0;
+    color: $gray-500;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__content {
+    margin: 0.5rem 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      margin: 0.25rem 0 0 0;
+      font-size: 3.125rem;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__cta {
+    margin-top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 480px) {
+    max-width: 70vw;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    max-width: 45vw;
+  }
+
+  &__picture {
+    width: 10rem;
+    height: 10rem;
+    opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  &__description {
+    margin-top: 2rem;
+    opacity: 0;
+
+    .description-text {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 300;
+      letter-spacing: .1rem;
+      line-height: 1.5;
+      color: $white;
+      text-align: center;
+
+      @media screen and (min-width: 480px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__linkedin {
+    margin-top: 1rem;
+    opacity: 0;
+  }
+
+  &__skills {
+    margin: 3rem -0.5rem -1.25rem -0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .skill {
+      margin-bottom: 1.25rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      background-color: $blue-400;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 12%), 0 2px 4px 0 rgb(0 0 0 / 8%);
+      border-radius: 9999px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      transition: all .4s ease-in;
+      opacity: 0;
+
+      &__text {
+        margin: 0;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: default;
+
+        @media screen and (min-width: 480px) {
+          font-size: 1.125rem;
+        }
+      }
+
+      &:hover {
+        transition: all .4s ease-out;
+        background-color: transparent;
+        border-color: $gray-400;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.contact-section {
+  &__email {
+    text-align: center;
+    opacity: 0;
+
+    .email-link {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $white;
+      font-weight: 700;
+      letter-spacing: .1rem;
+      transition: all .4s ease-in;
+
+      @media screen and (min-width: 480px) {
+        font-size: 2.81rem;
+      }
+
+      &:hover {
+        transition: all .4s ease-out;
+        text-decoration: underline;
+        color: $gray-400;
+      }
+    }
+  }
+
+  &__social-networks {
+    margin: 3rem -1rem -1rem -1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 480px) {
+      margin: 6rem -2rem -0.75rem -2rem;;
+    }
+
+    .social-network {
+      display: block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      width: 4rem;
+      height: 4rem;
+      opacity: 0;
+
+      @media screen and (min-width: 480px) {
+        width: 5rem;
+        height: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      &__link {
+        color: $white;
+        transition: all .4s ease-in;
+
+        &:hover {
+          color: $gray-400;
+          transition: all .4s ease-out;
+        }
+      }
+
+      &__icon {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+// Animations when section is viewed
+.viewed {
+  .entry-section {
+    &__hello {
+      @include animate(tracking-in-expand, 0.5s, 0s, both);
+    }
+  
+    &__content {
+      @include animate(fade-in-fwd, 1.2s, 0.5s, both);
+    }
+  
+    &__cta {
+      @include animate(scale-in-ver-center, 0.5s, 1s, both);
+    }
+  }
+
+  .about-section {
+    &__picture {
+      @include animate(fade-in-fwd, 1s, 0.5s, both);
+    }
+
+    &__description {
+      @include animate(fade-in-fwd, 1.2s, 1s, both);
+    }
+
+    &__linkedin {
+      @include animate(fade-in-fwd, 0.5s, 1.5s, both);
+    }
+
+    &__skills {
+      .skill {
+        @include animate(flip-in-hor-top, 0.6s, 2s, both);
+      }
+    }
+  }
+
+  .contact-section {
+    &__email {
+      @include animate(tracking-in-expand, 0.5s, 0s, both);
+    }
+
+    &__social-networks {
+      .social-network {
+        @include animate(rotate-in-ver, 0.5s, 0.5s, both);
+      }
+    }
+  }
+}
