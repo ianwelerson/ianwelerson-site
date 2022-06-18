@@ -1,7 +1,7 @@
 .go-down {
   height: 3rem;
   width: 3rem;
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 2rem;
   color: $blue-400;
@@ -21,6 +21,10 @@
     .go-down__icon {
       transform: rotate(180deg);
     }
+  }
+
+  @media screen and (min-width: 380px) {
+    display: flex;
   }
 }
 

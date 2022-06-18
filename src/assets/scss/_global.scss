@@ -1,14 +1,19 @@
 html {
   scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Quicksand', Arial, sans-serif;
+  margin: 0;
   color: $white;
+  overflow-x: hidden;
 }
 
 .page-content {
   position: relative;
+  padding: 0 1rem;
 
   &__section {
     min-height: 100vh;

@@ -4,18 +4,27 @@
   &__hello {
     margin: 0;
     color: $gray-500;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      font-size: 1.25rem;
+    }
   }
 
   &__content {
-    margin: 0.25rem 0 0 0;
-    font-size: 3.125rem;
+    margin: 0.5rem 0 0 0;
+    font-size: 2.5rem;
     font-weight: 300;
     opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      margin: 0.25rem 0 0 0;
+      font-size: 3.125rem;
+    }
 
     strong {
       font-weight: 700;
@@ -34,30 +43,45 @@
   justify-content: center;
   align-items: center;
 
+  @media screen and (min-width: 480px) {
+    max-width: 70vw;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    max-width: 45vw;
+  }
+
   &__picture {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     opacity: 0;
+
+    @media screen and (min-width: 480px) {
+      width: 12rem;
+      height: 12rem;
+    }
   }
 
   &__description {
-    max-width: 50vw;
     margin-top: 2rem;
     opacity: 0;
 
     .description-text {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 300;
       letter-spacing: .1rem;
       line-height: 1.5;
       color: $white;
       text-align: center;
+
+      @media screen and (min-width: 480px) {
+        font-size: 1.25rem;
+      }
     }
   }
 
   &__skills {
-    max-width: 50vw;
     margin: 3rem -0.5rem -1.25rem -0.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -79,9 +103,13 @@
       &__text {
         margin: 0;
         padding: 0.75rem 1.25rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 500;
         cursor: default;
+
+        @media screen and (min-width: 480px) {
+          font-size: 1.125rem;
+        }
       }
 
       &:hover {
@@ -100,12 +128,16 @@
     opacity: 0;
 
     .email-link {
-      font-size: 3.125rem;
+      font-size: 1.5rem;
       text-decoration: none;
       color: $white;
       font-weight: 700;
       letter-spacing: .1rem;
       transition: all .4s ease-in;
+
+      @media screen and (min-width: 480px) {
+        font-size: 2.81rem;
+      }
 
       &:hover {
         transition: all .4s ease-out;
@@ -116,20 +148,32 @@
   }
 
   &__social-networks {
-    margin: 6rem -2rem -0.75rem -2rem;
+    margin: 3rem -1rem -1rem -1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 480px) {
+      margin: 6rem -2rem -0.75rem -2rem;;
+    }
+
     .social-network {
       display: block;
-      margin-left: 2rem;
-      margin-right: 2rem;
-      margin-bottom: 0.75rem;
-      width: 5rem;
-      height: 5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      width: 4rem;
+      height: 4rem;
       opacity: 0;
+
+      @media screen and (min-width: 480px) {
+        width: 5rem;
+        height: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 0.75rem;
+      }
 
       &__link {
         color: $white;
