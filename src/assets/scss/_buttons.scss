@@ -35,7 +35,7 @@
   
   &--outline {
     padding: 0.75rem 2.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     color: $gray-400;
@@ -44,6 +44,10 @@
     background-color: transparent;
     box-shadow: 1px 1px $gray-400, 2px 2px $gray-400, 3px 3px $gray-400, 4px 4px $gray-400, 5px 5px $gray-400, 6px 6px $gray-400, 7px 7px $gray-400, 8px 8px $gray-400;
     transform: translateX(-8px) translateY(-8px);
+
+    @media screen and (min-width: 380px) {
+      font-size: 1.25rem;
+    }
 
     &:hover {
       color: $primary;
