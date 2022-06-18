@@ -38,11 +38,11 @@
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: $gray-400;
+    color: $white;
     border: 1px solid;
-    border-color: $gray-400;
+    border-color: $white;
     background-color: transparent;
-    box-shadow: 1px 1px $gray-400, 2px 2px $gray-400, 3px 3px $gray-400, 4px 4px $gray-400, 5px 5px $gray-400, 6px 6px $gray-400, 7px 7px $gray-400, 8px 8px $gray-400;
+    box-shadow: 1px 1px $white, 2px 2px $white, 3px 3px $white, 4px 4px $white, 5px 5px $white, 6px 6px $white, 7px 7px $white, 8px 8px $white;
     transform: translateX(-8px) translateY(-8px);
 
     @media screen and (min-width: 380px) {
@@ -51,7 +51,7 @@
 
     &:hover {
       color: $primary;
-      background-color: $gray-400;
+      background-color: $white;
       box-shadow: none;
       transition: all .4s ease-out;
     }
@@ -59,14 +59,14 @@
 
   &--text {
     padding: 0.5rem 1.5rem;
-    color: $gray-400;
+    color: $white;
     font-weight: 500;
     border: 1px solid;
-    border-color: $gray-400;
+    border-color: $white;
 
     &:hover {
       color: $primary;
-      background-color: $gray-400;
+      background-color: $white;
       transition: all .4s ease-out;
     }
   }
